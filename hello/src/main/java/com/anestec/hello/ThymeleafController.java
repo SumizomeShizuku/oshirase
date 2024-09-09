@@ -27,5 +27,5 @@ public class ThymeleafController {
     public String defultPage() {
         return "login";  // 显示 index.html 页面
     }
-    
+
 }
