@@ -1,41 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
-}
-.container {
-    width: 800px;
-    margin: 0 auto;
-    border: 1px solid #cccccc;
-    padding: 20px;
-}
-.form-group {
-    margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 label {
-    display: inline-block;
-    width: 120px;
+  display: inline-block;
+  width: 120px;
+  margin-bottom: 10px;
 }
-input[type="text"], select {
-    width: 200px;
-    padding: 5px;
+input[type="text"],
+input[type="date"],
+select {
+  width: 200px;
+  padding: 5px;
 }
-button {
-    padding: 5px 15px;
-    margin-top: 10px;
+.search-container {
+  margin-bottom: 20px;
+}
+.date-range {
+  display: inline-block;
+  width: 90px;
+}
+.date-range-separator {
+  display: inline-block;
+  padding: 0 10px;
 }
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
-th, td {
-    border: 1px solid #cccccc;
-    padding: 10px;
-    text-align: left;
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+th,
+td {
+  padding: 10px;
+  text-align: left;
 }
 th {
-    background-color: #2a5783;
-    color: white;
+  background-color: #f2f2f2;
 }
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.pagination a {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+}
+.pagination a.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
 }

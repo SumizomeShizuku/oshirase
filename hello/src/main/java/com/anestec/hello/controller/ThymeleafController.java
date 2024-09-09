@@ -1,4 +1,4 @@
-package com.anestec.hello;
+package com.anestec.hello.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

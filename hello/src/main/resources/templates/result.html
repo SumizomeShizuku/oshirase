@@ -1,72 +1,86 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お知らせ検索</title>
     <link rel="stylesheet" href="../static/result.css" />
-    <!-- Link to the CSS file -->
-    <title>Notification System</title>
   </head>
   <body>
-    <div class="container">
-      <div class="form-group">
-        <label for="title">お知らせタイトル</label>
-        <input type="text" id="title" />
-        <label for="category">お知らせ区分</label>
-        <select id="category">
-          <option value="">選択...</option>
-          <!-- Options here -->
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="publish-date">掲載日</label>
-        <input type="date" id="publish-date" />
-        <label for="valid-period">適用期間</label>
-        <input type="date" id="valid-period-start" /> ~
-        <input type="date" id="valid-period-end" />
-        <button>検索</button>
-      </div>
+    <h2>お知らせ検索</h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>選択</th>
-            <th>お知らせタイトル</th>
-            <th>お知らせ区分</th>
-            <th>掲載日</th>
-            <th>適用期間</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><input type="radio" name="select" /></td>
-            <td>7/10システムメンテナンスのお知らせ</td>
-            <td>重要</td>
-            <td>2023/07/01</td>
-            <td>2023/07/01 ~ 2023/07/10</td>
-          </tr>
-          <tr>
-            <td><input type="radio" name="select" /></td>
-            <td>7/1システムリニューアルのお知らせ</td>
-            <td>情報</td>
-            <td>2023/07/01</td>
-            <td>2023/07/01 ~ 2023/07/10</td>
-          </tr>
-          <tr>
-            <td><input type="radio" name="select" /></td>
-            <td>6/20システムメンテナンスのお知らせ</td>
-            <td>重要</td>
-            <td>2023/06/01</td>
-            <td>2023/06/01 ~ 2023/07/20</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="search-container">
+      <form action="" method="POST">
+        <div>
+          <label for="title">お知らせタイトル</label>
+          <input type="text" id="title" name="title" />
+        </div>
+        <div>
+          <label for="category">お知らせ区分</label>
+          <select id="category" name="category">
+            <option value="">選択してください</option>
+            <option value="category1">区分1</option>
+            <option value="category2">区分2</option>
+            <option value="category3">区分3</option>
+          </select>
+        </div>
+        <div>
+          <label for="publishDate">掲載日</label>
+          <input type="date" id="publishDate" name="publishDate" />
+        </div>
+        <div>
+          <label for="startDate">適用期間</label>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            class="date-range"
+          />
+          <span class="date-range-separator">~</span>
+          <input type="date" id="endDate" name="endDate" class="date-range" />
+        </div>
+        <div>
+          <button type="submit">検 索</button>
+        </div>
+      </form>
+    </div>
 
-      <div class="form-group">
-        <button>登録</button>
-        <button>変更</button>
-        <button>削除</button>
-      </div>
+    <table>
+      <thead>
+        <tr>
+          <th>タイトル</th>
+          <th>区分</th>
+          <th>掲載日</th>
+          <th>適用期間</th>
+          <th>アクション</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>サンプルタイトル1</td>
+          <td>区分1</td>
+          <td>2024-09-01</td>
+          <td>2024-09-01 ~ 2024-09-10</td>
+          <td><button>編集</button></td>
+        </tr>
+        <tr>
+          <td>サンプルタイトル2</td>
+          <td>区分2</td>
+          <td>2024-08-25</td>
+          <td>2024-08-25 ~ 2024-09-05</td>
+          <td><button>編集</button></td>
+        </tr>
+        <!-- 更多的行将会根据数据库内容填充 -->
+      </tbody>
+    </table>
+
+    <!-- 分页 -->
+    <div class="pagination">
+      <a href="#">«</a>
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">»</a>
     </div>
   </body>
 </html>
