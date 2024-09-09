@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid #cccccc;
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: inline-block;
+    width: 120px;
+}
+input[type="text"], select {
+    width: 200px;
+    padding: 5px;
+}
+button {
+    padding: 5px 15px;
+    margin-top: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #2a5783;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

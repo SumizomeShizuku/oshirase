@@ -18,10 +18,14 @@ public class ThymeleafController {
         return "login";  // 显示 login.html 页面
     }
 
+    @GetMapping("/result")
+    public String showResult() {
+        return "result";  // 显示 login.html 页面
+    }
 
-    // @GetMapping("/index")
-    // public String showIndex() {
-    //     return "index";  // 显示 index.html 页面
-    // }
+    @GetMapping("/")
+    public String defultPage() {
+        return "login";  // 显示 index.html 页面
+    }
     
 }

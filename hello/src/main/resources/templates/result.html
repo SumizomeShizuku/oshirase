@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/result.css" />
+    <!-- Link to the CSS file -->
+    <title>Notification System</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-group">
+        <label for="title">お知らせタイトル</label>
+        <input type="text" id="title" />
+        <label for="category">お知らせ区分</label>
+        <select id="category">
+          <option value="">選択...</option>
+          <!-- Options here -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="publish-date">掲載日</label>
+        <input type="date" id="publish-date" />
+        <label for="valid-period">適用期間</label>
+        <input type="date" id="valid-period-start" /> ~
+        <input type="date" id="valid-period-end" />
+        <button>検索</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>選択</th>
+            <th>お知らせタイトル</th>
+            <th>お知らせ区分</th>
+            <th>掲載日</th>
+            <th>適用期間</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="radio" name="select" /></td>
+            <td>7/10システムメンテナンスのお知らせ</td>
+            <td>重要</td>
+            <td>2023/07/01</td>
+            <td>2023/07/01 ~ 2023/07/10</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="select" /></td>
+            <td>7/1システムリニューアルのお知らせ</td>
+            <td>情報</td>
+            <td>2023/07/01</td>
+            <td>2023/07/01 ~ 2023/07/10</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="select" /></td>
+            <td>6/20システムメンテナンスのお知らせ</td>
+            <td>重要</td>
+            <td>2023/06/01</td>
+            <td>2023/06/01 ~ 2023/07/20</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="form-group">
+        <button>登録</button>
+        <button>変更</button>
+        <button>削除</button>
+      </div>
+    </div>
+  </body>
+</html>
