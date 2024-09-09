@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ThymeleafController {
 
     @GetMapping("/index")
-    public String showIndex(Model model) {
-        model.addAttribute("name", "小沢");
+    public String showIndex() {
+        // public String showIndex(Model model) {
+        // model.addAttribute("name", "小沢");
         return "index"; // 返回index.html页面
     }
 
@@ -19,13 +20,13 @@ public class ThymeleafController {
     }
 
     @GetMapping("/result")
-    public String showResult() {
-        return "result";  // 显示 login.html 页面
+    public String showResult(Model model) {
+        return "result";  // 显示 result.html 页面
     }
 
     @GetMapping("/")
     public String defultPage() {
-        return "login";  // 显示 index.html 页面
+        return "login";  // 显示 login.html 页面
     }
 
 }
